@@ -18,9 +18,9 @@ export function Quotes() {
             className="font-serif text-white tracking-tight leading-[1.1] text-left relative z-20"
             style={{ fontSize: "clamp(2rem, 5vw, 5.5rem)" }}
           >
-            "It is a shame for a man to<br className="hidden lg:block" />
+            &quot;It is a shame for a man to<br className="hidden lg:block" />
             grow old without seeing the beauty and strength of which
-            his body is capable,"
+            his body is capable,&quot;
           </h2>
         </div>
 

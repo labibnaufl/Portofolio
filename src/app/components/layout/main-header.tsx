@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 // ── Section → header color map ─────────────────────────────────────────────
 type HeaderTheme = { bg: string; color: string };
@@ -59,13 +60,13 @@ export function MainHeader() {
         style={{ backgroundColor: theme.bg }}
       >
         {/* Brand */}
-        <a
+        <Link
           href="/"
           className="font-serif text-xl md:text-2xl font-normal tracking-wide hover:opacity-60 transition-colors duration-300"
           style={{ color: theme.color }}
         >
-          bibbb – 2026
-        </a>
+          bibbb
+        </Link>
 
         {/* MENU button */}
         <button
@@ -112,15 +113,20 @@ export function MainHeader() {
         </div>
 
         <nav className="flex flex-col p-8 flex-1">
-          {["Home", "Projects", "About", "Contact"].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+          {[
+            { label: "Home",     href: "/" },
+            { label: "Projects", href: "/projects" },
+            { label: "About",    href: "/about" },
+            { label: "Contact",  href: "/contact" },
+          ].map(({ label, href }) => (
+            <Link
+              key={label}
+              href={href}
               onClick={() => setSidebarOpen(false)}
               className="py-5 font-serif text-3xl text-white/70 hover:text-white border-b border-white/10 transition-colors duration-200"
             >
-              {item}
-            </a>
+              {label}
+            </Link>
           ))}
         </nav>
       </aside>

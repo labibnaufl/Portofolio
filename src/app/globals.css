@@ -24,3 +24,13 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+/* ── Custom Scrollbar ──────────────────────────────────────── */
+
+* {
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
