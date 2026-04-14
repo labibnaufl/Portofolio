@@ -7,13 +7,20 @@ import Link from "next/link";
 type HeaderTheme = { bg: string; color: string };
 
 const SECTION_THEMES: Record<string, HeaderTheme> = {
-  "section-hero":       { bg: "#000000", color: "#ffffff" },
-  "section-intro":      { bg: "#ffffff", color: "#000000" },
-  "section-quotes":     { bg: "#000000", color: "#ffffff" },
-  "section-deepdive":   { bg: "#F8F8F4", color: "#000000" },
-  "section-techstack":  { bg: "#F8F8F4", color: "#000000" },
-  "section-persuasive": { bg: "#F8F8F4", color: "#000000" },
-  "section-footer":     { bg: "#ffffff", color: "#000000" },
+  // Home page
+  "section-hero":             { bg: "#000000", color: "#ffffff" },
+  "section-intro":            { bg: "#ffffff", color: "#000000" },
+  "section-quotes":           { bg: "#000000", color: "#ffffff" },
+  "section-deepdive":         { bg: "#F8F8F4", color: "#000000" },
+  "section-techstack":        { bg: "#F8F8F4", color: "#000000" },
+  "section-persuasive":       { bg: "#F8F8F4", color: "#000000" },
+  "section-footer":           { bg: "#ffffff", color: "#000000" },
+  // About page
+  "about-hero":               { bg: "#ffffff", color: "#000000" },
+  "about-profile":            { bg: "#000000", color: "#ffffff" },
+  "about-experiences":        { bg: "#000000", color: "#ffffff" },
+  "about-projects":           { bg: "#000000", color: "#ffffff" },
+  "about-activities":         { bg: "#000000", color: "#ffffff" },
 };
 
 const DEFAULT: HeaderTheme = { bg: "#000000", color: "#ffffff" };

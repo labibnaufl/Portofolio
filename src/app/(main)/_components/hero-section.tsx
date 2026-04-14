@@ -86,7 +86,7 @@ export function HeroSection() {
                 src="/Images/profilepic.png"
                 alt="Profile"
                 fill
-                className="object-cover object-center"
+                className="object-cover object-center grayscale hover:grayscale-0 transition-all duration-700 ease-in-out cursor-pointer"
                 priority
               />
             </span>

@@ -44,7 +44,7 @@ export function HeroSection() {
 
   return (
     <section
-      id="section-hero"
+      id="about-hero"
       ref={ref}
       className="relative w-full min-h-[calc(100vh-3.5rem)] bg-white flex flex-col items-center justify-center overflow-hidden"
     >

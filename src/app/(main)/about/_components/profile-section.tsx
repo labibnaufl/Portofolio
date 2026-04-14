@@ -1,16 +1,16 @@
 // app/(main)/about/_components/profile-section.tsx
 
 import Image from "next/image";
-import ScrollVelocity from "@/app/(main)/about/_components/scroll-velocity/ScrollVelocity";
+import ScrollVelocity from "@/components/animations/scroll-velocity/ScrollVelocity";
 
 export default function ProfileSection() {
   return (
     <section
-      className="relative w-full bg-black overflow-hidden"
-      style={{ height: "clamp(320px, 50vw, 520px)" }}
+      id="about-profile"
+      className="relative w-full min-h-[calc(100vh-3.5rem)] bg-black flex flex-col items-center justify-center overflow-hidden pb-50 "
     >
       {/* Scrolling text — fills and centers vertically */}
-      <div className="absolute inset-0 flex flex-col justify-center">
+      <div className="absolute inset-0 flex flex-col justify-center mt-20">
         <ScrollVelocity
           texts={["Who I Am?", "Who I Am?"]}
           velocity={80}
@@ -27,14 +27,13 @@ export default function ProfileSection() {
       </div>
 
       {/* Profile image — rectangular, centered, above text */}
-      <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+      <div className="absolute inset-0 flex items-center justify-center z-10 mt-20">
           <Image
-            src="/Images/profilepic.png"
+            src="/Images/potrait.JPG"
             alt="Profile Picture"
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="object-contain"
+            width={500}
+            height={500}
+            className="object-contain grayscale hover:grayscale-0 transition-all duration-700 ease-in-out cursor-pointer"
             priority
             quality={100}
           />
