@@ -122,9 +122,7 @@ export function MainHeader() {
         <nav className="flex flex-col p-8 flex-1">
           {[
             { label: "Home",     href: "/" },
-            { label: "Projects", href: "/projects" },
             { label: "About",    href: "/about" },
-            { label: "Contact",  href: "/contact" },
           ].map(({ label, href }) => (
             <Link
               key={label}
