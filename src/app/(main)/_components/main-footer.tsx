@@ -176,7 +176,7 @@ export function MainFooter() {
           </div>
 
           {/* BOTTOM — social icons + copyright (stacked on mobile, grid-split on desktop) */}
-          <div className="flex items-center md:items-end gap-2 w-fit">
+          <div className="flex items-center md:items-end gap-2 w-fit bg-white">
             {socialLinks.map((s) => (
               <motion.a
                 key={s.label}
