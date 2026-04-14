@@ -26,7 +26,7 @@ const projects: Projects[] = [
     role: "Fullstack Developer",
     type: "Academic Project",
     thumbnail: "/Images/projects/23flex.png",
-    link: "https://23-fit.vercel.app/",
+    link: "https://23-flex.vercel.app/",
   },
   {
     name: "PLTU Machine Monitoring",
