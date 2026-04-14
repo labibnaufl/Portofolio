@@ -45,7 +45,7 @@ export function Introduction() {
                 src="/Images/AdaIndonesiaCoy.png"
                 alt="Indonesia"
                 fill
-                className="object-containt object-center"
+                className="object-contain object-center"
               />
             </span>
           </span>
@@ -56,7 +56,7 @@ export function Introduction() {
 
       {/* ── Bottom Text ─────────────────────────────────── */}
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12">
-        <p className="text-medium md:text-lg font-medium tracking-wide text-neutral-800">
+        <p className="text-base md:text-lg font-medium tracking-wide text-neutral-800">
           Interested In Machine Learning and Fullstack Development
         </p>
       </div>

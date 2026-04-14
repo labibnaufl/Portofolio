@@ -77,7 +77,7 @@ export function HeroSection() {
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 whitespace-nowrap">
         <a
           href="#about"
-          className="text-white/60 text-sm tracking-widest font-sans hover:text-white transition-colors duration-300"
+          className="text-black/40 text-sm tracking-widest font-sans hover:text-black transition-colors duration-300"
         >
           Get to Know Me
         </a>

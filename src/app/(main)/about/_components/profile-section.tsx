@@ -7,7 +7,7 @@ export default function ProfileSection() {
   return (
     <section
       id="about-profile"
-      className="relative w-full min-h-[calc(100vh-3.5rem)] bg-black flex flex-col items-center justify-center overflow-hidden pb-50 "
+      className="relative w-full min-h-[calc(100vh-3.5rem)] bg-black flex flex-col items-center justify-center overflow-hidden pb-16 md:pb-32"
     >
       {/* Scrolling text — fills and centers vertically */}
       <div className="absolute inset-0 flex flex-col justify-center mt-20">
@@ -33,6 +33,7 @@ export default function ProfileSection() {
             alt="Profile Picture"
             width={500}
             height={500}
+            style={{ width: "clamp(200px, 60vw, 500px)", height: "auto" }}
             className="object-contain grayscale hover:grayscale-0 transition-all duration-700 ease-in-out cursor-pointer"
             priority
             quality={100}

@@ -40,7 +40,7 @@ export function EyesAnimation() {
 
   return (
     <motion.div
-      className="flex justify-center items-center gap-20 my-10"
+      className="flex justify-center items-center gap-20 my-10 scale-[0.65] sm:scale-[0.85] md:scale-100 origin-center"
       initial={{ opacity: 0, scale: 0.85 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true, amount: 0.5 }}

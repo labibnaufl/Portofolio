@@ -53,36 +53,38 @@ export const ProjectSection = () => {
 
   return (
     <>
-      {/* Floating cursor image — fixed to viewport, follows mouse */}
-      <AnimatePresence>
-        {hoveredIndex !== null && (
-          <motion.div
-            key={hoveredIndex}
-            className="fixed z-[9999] pointer-events-none overflow-hidden rounded-sm"
-            style={{
-              left: mousePos.x + 20,
-              top: mousePos.y - 80,
-              width: 220,
-              height: 150,
-            }}
-            initial={{ opacity: 0, scale: 0.85, y: 10 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.85, y: 10 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
-          >
-            <Image
-              src={projects[hoveredIndex].thumbnail}
-              alt={projects[hoveredIndex].name}
-              fill
-              className="object-cover"
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Floating cursor image — only visible on desktop pointer devices */}
+      <div className="hidden md:block">
+        <AnimatePresence>
+          {hoveredIndex !== null && (
+            <motion.div
+              key={hoveredIndex}
+              className="fixed z-[9999] pointer-events-none overflow-hidden rounded-sm"
+              style={{
+                left: mousePos.x + 20,
+                top: mousePos.y - 80,
+                width: 220,
+                height: 150,
+              }}
+              initial={{ opacity: 0, scale: 0.85, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.85, y: 10 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+            >
+              <Image
+                src={projects[hoveredIndex].thumbnail}
+                alt={projects[hoveredIndex].name}
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
 
       <section
         id="about-projects"
-        className="w-full bg-black px-6 pt-24 pb-16 md:px-16 lg:px-32 xl:px-48"
+        className="w-full bg-black px-6 pt-14 pb-12 md:px-16 md:pt-24 md:pb-16 lg:px-32 xl:px-48"
         onMouseMove={handleMouseMove}
       >
         <ScrollReveal delay={0.2} direction="up">

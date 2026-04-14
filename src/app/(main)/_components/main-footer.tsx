@@ -125,21 +125,20 @@ export function MainFooter() {
 
         {/* Layer 2: Content — fixed posisi, tidak ikut morph */}
         <div
-          className="absolute grid grid-rows-[1fr_auto] grid-cols-[1fr_auto]"
+          className="absolute flex flex-col justify-between p-6 md:py-12 md:px-14 md:grid md:grid-rows-[1fr_auto] md:grid-cols-[1fr_auto]"
           style={{
             top: vertInset,
             left: sideInset,
             right: sideInset,
             bottom: vertInset,
-            padding: "3rem 3.5rem",
           }}
         >
           {/* TOP LEFT — heading */}
-          <div className="flex items-center">
+          <div className="flex items-start md:items-center">
             <motion.h2
               style={{
                 color: headingColor,
-                fontSize: "clamp(2.2rem, 5vw, 4.5rem)",
+                fontSize: "clamp(1.8rem, 4vw, 4.5rem)",
                 lineHeight: 1.08,
               }}
               className="font-sans font-bold tracking-tight"
@@ -152,7 +151,7 @@ export function MainFooter() {
           </div>
 
           {/* TOP RIGHT — navigation */}
-          <div className="flex flex-col items-end justify-center gap-1 mr-20">
+          <div className="flex flex-row flex-wrap items-center justify-start gap-4 md:flex-col md:items-end md:justify-center md:gap-1 md:mr-20">
             {navLinks.map((nav) => (
               <Link
                 key={nav.label}
@@ -176,8 +175,8 @@ export function MainFooter() {
             ))}
           </div>
 
-          {/* BOTTOM LEFT — social icons */}
-          <div className="flex items-end gap-2 w-fit bg-white">
+          {/* BOTTOM — social icons + copyright (stacked on mobile, grid-split on desktop) */}
+          <div className="flex items-center md:items-end gap-2 w-fit">
             {socialLinks.map((s) => (
               <motion.a
                 key={s.label}
@@ -199,8 +198,8 @@ export function MainFooter() {
             ))}
           </div>
 
-          {/* BOTTOM RIGHT — copyright */}
-          <div className="flex items-end justify-end">
+          {/* copyright */}
+          <div className="flex items-center md:items-end justify-start md:justify-end">
             <motion.p
               style={{ color: mutedColor }}
               className="font-sans text-xs md:text-sm tracking-wide"

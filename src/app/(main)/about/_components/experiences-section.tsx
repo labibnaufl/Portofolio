@@ -28,7 +28,7 @@ export const ExperiencesSection = () => {
   return (
     <section
       id="about-experiences"
-      className="w-full bg-black px-6 pt-24 pb-16 md:px-16 lg:px-32 xl:px-48"
+      className="w-full bg-black px-6 pt-14 pb-12 md:px-16 md:pt-24 md:pb-16 lg:px-32 xl:px-48"
     >
       <ScrollReveal delay={0.2} direction="up">
         <h2
@@ -53,14 +53,14 @@ export const ExperiencesSection = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white font-sans font-bold leading-none tracking-tight hover:underline underline-offset-4"
-                    style={{ fontSize: "clamp(1.8rem, 4vw, 3.0rem)" }}
+                    style={{ fontSize: "clamp(1.5rem, 4vw, 3.0rem)" }}
                   >
                     {exp.company}
                   </a>
                 ) : (
                   <p
                     className="text-white font-sans font-bold leading-none tracking-tight"
-                    style={{ fontSize: "clamp(1.8rem, 4vw, 3.5rem)" }}
+                    style={{ fontSize: "clamp(1.5rem, 4vw, 3.5rem)" }}
                   >
                     {exp.company}
                   </p>

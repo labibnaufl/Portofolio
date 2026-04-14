@@ -27,7 +27,7 @@ export function Quotes() {
         {/* Socrates & Arrow Block — scroll to reveal */}
         <div className="w-full max-w-5xl mx-auto px-6 pb-24 mr-2">
           <motion.div
-            className="flex items-end justify-end gap-4"
+            className="flex items-end justify-center md:justify-end gap-4"
             initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}

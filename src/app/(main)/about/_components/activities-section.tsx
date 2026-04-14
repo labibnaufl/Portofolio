@@ -36,7 +36,7 @@ export const ActivitiesSection = () => {
   return (
     <section
       id="about-activities"
-      className="w-full bg-black px-6 pt-24 pb-16 md:px-16 lg:px-32 xl:px-48"
+      className="w-full bg-black px-6 pt-14 pb-12 md:px-16 md:pt-24 md:pb-16 lg:px-32 xl:px-48"
     >
       <ScrollReveal delay={0.2} direction="up">
         <h2
@@ -45,29 +45,28 @@ export const ActivitiesSection = () => {
         >
           My Activities
         </h2>
-
-      <div>
-        <div className="border-t-2 border-white/40" />
-        {experiences.map((exp, i) => (
-          <motion.div
-            key={i}
-            whileHover={{ backgroundColor: "rgba(255,255,255,0.04)" }}
-            transition={{ duration: 0.2 }}
-            className="group border-b-2 border-white/40 cursor-default"
-          >
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-1 py-10 items-center">
-              <p
-                className="text-white font-sans font-bold leading-none tracking-tight"
-                style={{ fontSize: "clamp(1.8rem, 4vw, 3.0rem)" }}
-              >
-                {exp.organization}
-              </p>
-              <p className="text-white font-sans text-sm md:text-base md:pl-24">{exp.date}</p>
-              <p className="text-white font-sans text-sm md:text-base">{exp.role}</p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+        <div>
+          <div className="border-t-2 border-white/40" />
+          {experiences.map((exp, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ backgroundColor: "rgba(255,255,255,0.04)" }}
+              transition={{ duration: 0.2 }}
+              className="group border-b-2 border-white/40 cursor-default"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-1 py-10 items-center">
+                <p
+                  className="text-white font-sans font-bold leading-none tracking-tight"
+                  style={{ fontSize: "clamp(1.5rem, 4vw, 3.0rem)" }}
+                >
+                  {exp.organization}
+                </p>
+                <p className="text-white font-sans text-sm md:text-base md:pl-24">{exp.date}</p>
+                <p className="text-white font-sans text-sm md:text-base">{exp.role}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </ScrollReveal>
     </section>
   );

@@ -35,7 +35,7 @@ export function DeepDive() {
         viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
       >
-        <p className="max-w-3xl text-lg md:text-2xl font-medium tracking-wide text-neutral-800 leading-relaxed text-right">
+        <p className="max-w-3xl text-base md:text-2xl font-medium tracking-wide text-neutral-800 leading-relaxed text-left md:text-right">
           Hey there! I&apos;m <strong>Naufal Labib Nugroho</strong>, an undergraduate
           Computer Engineering student from Diponegoro University I focus on building intelligent applications at the intersection of
           machine learning and full-stack development, turning ideas into
