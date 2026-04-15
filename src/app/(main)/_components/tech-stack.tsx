@@ -17,6 +17,7 @@ const groupA = [
   { src: "/Images/Techstack/Visual Studio Code (VS Code).png", alt: "VS Code", startX: 85, startY: -20, width: 160, startsSharp: false },
   { src: "/Images/Techstack/PostgresSQL.png",  alt: "Postgres",   startX:  15, startY:  68, width: 170, startsSharp: false },
   { src: "/Images/Techstack/GitHub.png",       alt: "GitHub",     startX: -85, startY:  25, width: 190, startsSharp: false },
+  { src: "/Images/Techstack/mqtt.png",         alt: "MQTT",       startX: -25, startY: -85, width: 150, startsSharp: false },
 ];
 
 const groupB = [
@@ -30,6 +31,7 @@ const groupB = [
   { src: "/Images/Techstack/PHP.png",          alt: "PHP",              startX:  85, startY: -20, width: 170, startsSharp: false },
   { src: "/Images/Techstack/Tailwind CSS.png", alt: "Tailwind",         startX:  15, startY:  68, width: 190, startsSharp: false },
   { src: "/Images/Techstack/Android Studio.png", alt: "Android Studio", startX: -85, startY:  25, width: 170, startsSharp: false },
+  { src: "/Images/Techstack/nodeRED.png",      alt: "Node-RED",         startX: -25, startY: -85, width: 150, startsSharp: false },
 ];
 
 // ─── Logo Component ───────────────────────────────────────────────────────────
@@ -86,7 +88,7 @@ function FloatingLogo({ logo, progress, windowStart, windowEnd }: LogoProps) {
         marginTop: -(logo.width / 2),
       }}
     >
-      <div className="relative" style={{ width: logo.width, height: logo.width }}>
+      <div className="relative scale-50 sm:scale-75 md:scale-100" style={{ width: logo.width, height: logo.width }}>
         <Image
           src={logo.src}
           alt={logo.alt}
@@ -175,8 +177,8 @@ export function TechStack() {
             key={`a-${i}`}
             logo={logo}
             progress={scrollYProgress}
-            windowStart={0.10}
-            windowEnd={0.48}
+            windowStart={0.10 + (i * 0.02)}
+            windowEnd={0.48 + (i * 0.02)}
           />
         ))}
 
@@ -186,8 +188,8 @@ export function TechStack() {
             key={`b-${i}`}
             logo={logo}
             progress={scrollYProgress}
-            windowStart={0.56}
-            windowEnd={0.96}
+            windowStart={0.56 + (i * 0.02)}
+            windowEnd={0.96 + (i * 0.02)}
           />
         ))}
 

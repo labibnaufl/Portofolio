@@ -35,7 +35,7 @@ const projects: Projects[] = [
     thumbnail: "/Images/projects/pltu.png",
   },
   {
-    name: "Cypher Calculator",
+    name: "Cipher Calculator",
     role: "Frontend Developer",
     type: "Academic Project",
     thumbnail: "/Images/projects/cypher.png",

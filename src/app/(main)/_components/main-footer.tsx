@@ -151,7 +151,7 @@ export function MainFooter() {
           </div>
 
           {/* TOP RIGHT — navigation */}
-          <div className="flex flex-row flex-wrap items-center justify-start gap-4 md:flex-col md:items-end md:justify-center md:gap-1 md:mr-20">
+          <div className="flex flex-col flex-wrap items-start justify-start gap-4 md:flex-col md:items-end md:justify-center md:gap-1 md:mr-20">
             {navLinks.map((nav) => (
               <Link
                 key={nav.label}

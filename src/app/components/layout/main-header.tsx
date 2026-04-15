@@ -69,7 +69,7 @@ export function MainHeader() {
         {/* Brand */}
         <Link
           href="/"
-          className="font-serif text-xl md:text-2xl font-normal tracking-wide hover:opacity-60 transition-colors duration-300"
+          className="text-xl md:text-2xl font-normal tracking-wide hover:opacity-60 transition-colors duration-300"
           style={{ color: theme.color }}
         >
           bibbb

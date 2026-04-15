@@ -59,7 +59,7 @@ export function HeroSection() {
       >
         <h1 
           className="font-serif text-white leading-[1.15]"
-          style={{ fontSize: "clamp(2rem, 5.5vw, 6.5rem)" }}
+          style={{ fontSize: "clamp(4rem, 5.5vw, 6.5rem)" }}
         >
           
           {/* Line 1 */}
@@ -76,7 +76,7 @@ export function HeroSection() {
 
             {/* Image (Portrait orientation matching the design) */}
             <span
-              className="relative inline-block overflow-hidden rounded-sm"
+              className="relative sm:inline-block hidden overflow-hidden rounded-sm"
               style={{
                 width: "clamp(6rem, 12vw, 12rem)",
                 height: "clamp(6rem, 12vw, 12rem)",
