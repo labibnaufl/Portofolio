@@ -99,7 +99,7 @@ export function MainFooter() {
   const navLinks = isAbout
     ? [
         { label: "Home", href: "/" },
-        { label: "Get My CV", href: "/cv.pdf" },
+        { label: "Get My CV", href: "/Naufal Labib Nugroho.pdf" },
       ]
     : [{ label: "About Me", href: "/about" }];
 
@@ -152,27 +152,49 @@ export function MainFooter() {
 
           {/* TOP RIGHT — navigation */}
           <div className="flex flex-col flex-wrap items-start justify-start gap-4 md:flex-col md:items-end md:justify-center md:gap-1 md:mr-20">
-            {navLinks.map((nav) => (
-              <Link
-                key={nav.label}
-                href={nav.href}
-                target={nav.href.endsWith(".pdf") ? "_blank" : undefined}
-                className="group flex items-center gap-2 hover:opacity-60 transition-opacity"
-              >
-                <motion.span
-                  style={{ color: linkColor }}
-                  className="font-sans text-sm md:text-base tracking-wide"
+            {navLinks.map((nav) => {
+              const isPdf = nav.href.endsWith(".pdf");
+              const content = (
+                <>
+                  <motion.span
+                    style={{ color: linkColor }}
+                    className="font-sans text-sm md:text-base tracking-wide"
+                  >
+                    {nav.label}
+                  </motion.span>
+                  <motion.span
+                    style={{ color: linkColor }}
+                    className="transition-transform duration-300 group-hover:translate-x-1 text-base"
+                  >
+                    →
+                  </motion.span>
+                </>
+              );
+
+              if (isPdf) {
+                return (
+                  <a
+                    key={nav.label}
+                    href={nav.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-2 hover:opacity-60 transition-opacity"
+                  >
+                    {content}
+                  </a>
+                );
+              }
+
+              return (
+                <Link
+                  key={nav.label}
+                  href={nav.href}
+                  className="group flex items-center gap-2 hover:opacity-60 transition-opacity"
                 >
-                  {nav.label}
-                </motion.span>
-                <motion.span
-                  style={{ color: linkColor }}
-                  className="transition-transform duration-300 group-hover:translate-x-1 text-base"
-                >
-                  →
-                </motion.span>
-              </Link>
-            ))}
+                  {content}
+                </Link>
+              );
+            })}
           </div>
 
           {/* BOTTOM — social icons + copyright (stacked on mobile, grid-split on desktop) */}

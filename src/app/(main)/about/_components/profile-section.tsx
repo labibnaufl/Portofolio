@@ -12,7 +12,7 @@ export default function ProfileSection() {
       {/* Scrolling text — fills and centers vertically */}
       <div className="absolute inset-0 flex flex-col justify-center mt-20">
         <ScrollVelocity
-          texts={["Who I Am?", "Who I Am?"]}
+          texts={["Who Am I?", "Who Am I?"]}
           velocity={80}
           className="text-white select-none"
           scrollerStyle={{
