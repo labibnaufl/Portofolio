@@ -202,7 +202,7 @@ export function MainHeader() {
 
             {/* ── Nav links — top-left, large thin uppercase ── */}
             <motion.nav
-              className="flex flex-col px-20 pt-10 flex-1"
+              className="flex flex-col px-8 md:px-16 lg:px-20 pt-8 md:pt-12 flex-1"
               variants={navContainerVariants}
               initial="hidden"
               animate="visible"
@@ -213,7 +213,7 @@ export function MainHeader() {
                   <Link
                     href={href}
                     onClick={() => setSidebarOpen(false)}
-                    className="block font-sans font-light text-black hover:opacity-40 transition-opacity pt-10 duration-200 uppercase leading-none"
+                    className="block font-sans font-light text-black hover:opacity-40 transition-opacity pt-6 md:pt-10 duration-200 uppercase leading-none"
                     style={{
                       fontSize: "clamp(3rem, 9vw, 7rem)",
                       letterSpacing: "-0.01em",
@@ -231,14 +231,14 @@ export function MainHeader() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="shrink-0 px-10 pb-10"
+              className="shrink-0 px-8 md:px-16 lg:px-20 pb-8 md:pb-10"
             >
               {/* Horizontal rule */}
               <div className="w-full border-t border-black/30 mb-5" />
 
-              <div className="flex items-center justify-between">
+              <div className="flex items-end sm:items-center justify-between gap-4">
                 {/* Left: Name + social icons */}
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-2 sm:gap-3">
                   <p
                     className="font-sans font-bold text-black uppercase tracking-tight leading-none"
                     style={{ fontSize: "clamp(1.1rem, 2.5vw, 1.6rem)" }}
@@ -272,7 +272,7 @@ export function MainHeader() {
                   href="/about"
                   onClick={() => setSidebarOpen(false)}
                   aria-label="Go to About"
-                  className="group flex items-center justify-center w-16 h-16 bg-black hover:bg-black/80 transition-colors duration-300"
+                  className="group flex shrink-0 items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-black hover:bg-black/80 transition-colors duration-300"
                   style={{ borderRadius: "4px" }}
                 >
                   <span className="text-white text-2xl font-light transition-transform duration-300 group-hover:translate-x-1 inline-block">
