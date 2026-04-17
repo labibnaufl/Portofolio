@@ -182,14 +182,15 @@ export function TechStack() {
           />
         ))}
 
-        {/* ── Group B: 56% → 96% of total scroll progress ── */}
+        {/* ── Group B: 56% → 80% (plus stagger) of total scroll progress ── */}
         {groupB.map((logo, i) => (
           <FloatingLogo
             key={`b-${i}`}
             logo={logo}
             progress={scrollYProgress}
             windowStart={0.56 + (i * 0.02)}
-            windowEnd={0.96 + (i * 0.02)}
+            // Changed from 0.96 to 0.82 to prevent the final logos from exceeding max 1.0 progress
+            windowEnd={0.82 + (i * 0.02)}
           />
         ))}
 

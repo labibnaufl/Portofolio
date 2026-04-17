@@ -14,12 +14,12 @@ const socialLinks = [
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/naufal-labib-nugroho",
     icon: "/Images/Techstack/LinkedIn.png",
   },
   {
     label: "GitHub",
-    href: "https://github.com",
+    href: "https://github.com/labibnaufl",
     icon: "/Images/Techstack/GitHub.png",
   },
 ];
