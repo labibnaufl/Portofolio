@@ -102,7 +102,7 @@ function CloseButton({ onClick }: { onClick: () => void }) {
     >
       {/* CLOSE label */}
       <span
-        className="text-3xl font-sans font-semibold tracking-[0.25em] pl-[0.25em] uppercase text-black select-none"
+        className="text-xl md:text-3xl font-sans font-semibold tracking-[0.25em] pl-[0.25em] uppercase text-black select-none"
       >
         CLOSE
       </span>
