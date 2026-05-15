@@ -1,6 +1,12 @@
 "use client";
 
-import { motion, useScroll, useTransform, MotionValue, useMotionValue } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  MotionValue,
+  useMotionValue,
+} from "framer-motion";
 import { useRef, useEffect } from "react";
 import Image from "next/image";
 
@@ -8,30 +14,156 @@ import Image from "next/image";
 
 const groupA = [
   // Sharp starters — same positions as Group B sharp starters
-  { src: "/Images/Techstack/Next.js.png",     alt: "Next.js",    startX:  60, startY: -60, width: 160, startsSharp: true  },
-  { src: "/Images/Techstack/React.png",        alt: "React",      startX: -80, startY: -35, width: 180, startsSharp: true  },
-  { src: "/Images/Techstack/TypeScript.png",   alt: "TypeScript", startX:  80, startY:  55, width: 140, startsSharp: true  },
-  { src: "/Images/Techstack/Node.js.png",      alt: "Node.js",    startX: -50, startY:  68, width: 170, startsSharp: true  },
+  {
+    src: "/Images/Techstack/Next.js.png",
+    alt: "Next.js",
+    startX: 60,
+    startY: -60,
+    width: 160,
+    startsSharp: true,
+  },
+  {
+    src: "/Images/Techstack/React.png",
+    alt: "React",
+    startX: -80,
+    startY: -35,
+    width: 180,
+    startsSharp: true,
+  },
+  {
+    src: "/Images/Techstack/TypeScript.png",
+    alt: "TypeScript",
+    startX: 80,
+    startY: 55,
+    width: 140,
+    startsSharp: true,
+  },
+  {
+    src: "/Images/Techstack/Node.js.png",
+    alt: "Node.js",
+    startX: -50,
+    startY: 68,
+    width: 170,
+    startsSharp: true,
+  },
   // Blurred starters — same positions as Group B blurred starters
-  { src: "/Images/Techstack/Python.png",       alt: "Python",     startX: -40, startY: -65, width: 150, startsSharp: false },
-  { src: "/Images/Techstack/Visual Studio Code (VS Code).png", alt: "VS Code", startX: 85, startY: -20, width: 160, startsSharp: false },
-  { src: "/Images/Techstack/PostgresSQL.png",  alt: "Postgres",   startX:  15, startY:  68, width: 170, startsSharp: false },
-  { src: "/Images/Techstack/GitHub.png",       alt: "GitHub",     startX: -85, startY:  25, width: 190, startsSharp: false },
-  { src: "/Images/Techstack/mqtt.png",         alt: "MQTT",       startX: -25, startY: -85, width: 150, startsSharp: false },
+  {
+    src: "/Images/Techstack/Python.png",
+    alt: "Python",
+    startX: -40,
+    startY: -65,
+    width: 150,
+    startsSharp: false,
+  },
+  {
+    src: "/Images/Techstack/Visual Studio Code (VS Code).png",
+    alt: "VS Code",
+    startX: 85,
+    startY: -20,
+    width: 160,
+    startsSharp: false,
+  },
+  {
+    src: "/Images/Techstack/PostgresSQL.png",
+    alt: "Postgres",
+    startX: 15,
+    startY: 68,
+    width: 170,
+    startsSharp: false,
+  },
+  {
+    src: "/Images/Techstack/GitHub.png",
+    alt: "GitHub",
+    startX: -85,
+    startY: 25,
+    width: 190,
+    startsSharp: false,
+  },
+  {
+    src: "/Images/Techstack/mqtt.png",
+    alt: "MQTT",
+    startX: -25,
+    startY: -85,
+    width: 150,
+    startsSharp: false,
+  },
 ];
 
 const groupB = [
   // Sharp starters (visible first)
-  { src: "/Images/Techstack/Vercel.png",       alt: "Vercel",           startX:  60, startY: -60, width: 160, startsSharp: true  },
-  { src: "/Images/Techstack/NPM.png",          alt: "NPM",              startX: -80, startY: -35, width: 190, startsSharp: true  },
-  { src: "/Images/Techstack/prisma-svgrepo-com.png", alt: "Prisma",     startX:  80, startY:  55, width: 160, startsSharp: true  },
-  { src: "/Images/Techstack/Bun.png",          alt: "Bun",              startX: -50, startY:  68, width: 150, startsSharp: true  },
+  {
+    src: "/Images/Techstack/Vercel.png",
+    alt: "Vercel",
+    startX: 60,
+    startY: -60,
+    width: 160,
+    startsSharp: true,
+  },
+  {
+    src: "/Images/Techstack/NPM.png",
+    alt: "NPM",
+    startX: -80,
+    startY: -35,
+    width: 190,
+    startsSharp: true,
+  },
+  {
+    src: "/Images/Techstack/prisma-svgrepo-com.png",
+    alt: "Prisma",
+    startX: 80,
+    startY: 55,
+    width: 160,
+    startsSharp: true,
+  },
+  {
+    src: "/Images/Techstack/Bun.png",
+    alt: "Bun",
+    startX: -50,
+    startY: 68,
+    width: 150,
+    startsSharp: true,
+  },
   // Blurred starters (unfocused first)
-  { src: "/Images/Techstack/Laravel.png",      alt: "Laravel",          startX: -40, startY: -65, width: 180, startsSharp: false },
-  { src: "/Images/Techstack/PHP.png",          alt: "PHP",              startX:  85, startY: -20, width: 170, startsSharp: false },
-  { src: "/Images/Techstack/Tailwind CSS.png", alt: "Tailwind",         startX:  15, startY:  68, width: 190, startsSharp: false },
-  { src: "/Images/Techstack/Android Studio.png", alt: "Android Studio", startX: -85, startY:  25, width: 170, startsSharp: false },
-  { src: "/Images/Techstack/nodeRED.png",      alt: "Node-RED",         startX: -25, startY: -85, width: 150, startsSharp: false },
+  {
+    src: "/Images/Techstack/Laravel.png",
+    alt: "Laravel",
+    startX: -40,
+    startY: -65,
+    width: 180,
+    startsSharp: false,
+  },
+  {
+    src: "/Images/Techstack/PHP.png",
+    alt: "PHP",
+    startX: 85,
+    startY: -20,
+    width: 170,
+    startsSharp: false,
+  },
+  {
+    src: "/Images/Techstack/Tailwind CSS.png",
+    alt: "Tailwind",
+    startX: 15,
+    startY: 68,
+    width: 190,
+    startsSharp: false,
+  },
+  {
+    src: "/Images/Techstack/Android Studio.png",
+    alt: "Android Studio",
+    startX: -85,
+    startY: 25,
+    width: 170,
+    startsSharp: false,
+  },
+  {
+    src: "/Images/Techstack/nodeRED.png",
+    alt: "Node-RED",
+    startX: -25,
+    startY: -85,
+    width: 150,
+    startsSharp: false,
+  },
 ];
 
 // ─── Logo Component ───────────────────────────────────────────────────────────
@@ -47,12 +179,12 @@ function FloatingLogo({ logo, progress, windowStart, windowEnd }: LogoProps) {
   const dur = windowEnd - windowStart;
 
   // Six named checkpoints inside this group's window:
-  const t0 = windowStart;               // invisible, off-screen
-  const t1 = windowStart + dur * 0.08;  // fully faded in
-  const t2 = windowStart + dur * 0.48;  // blur swap begins
-  const t3 = windowStart + dur * 0.56;  // blur swap ends
-  const t4 = windowStart + dur * 0.88;  // fade-out begins
-  const t5 = windowEnd;                 // invisible, sucked into center
+  const t0 = windowStart; // invisible, off-screen
+  const t1 = windowStart + dur * 0.08; // fully faded in
+  const t2 = windowStart + dur * 0.48; // blur swap begins
+  const t3 = windowStart + dur * 0.56; // blur swap ends
+  const t4 = windowStart + dur * 0.88; // fade-out begins
+  const t5 = windowEnd; // invisible, sucked into center
 
   // Position: flies from screen edge → center
   const x = useTransform(progress, [t0, t5], [`${logo.startX}vw`, "0vw"]);
@@ -62,16 +194,12 @@ function FloatingLogo({ logo, progress, windowStart, windowEnd }: LogoProps) {
   const scale = useTransform(progress, [t0, t5], [1.8, 0]);
 
   // Opacity: 0 strictly outside the window — logos are INVISIBLE before t0 and after t5
-  const mOpacity = useTransform(
-    progress,
-    [t0, t1, t4, t5],
-    [0,   1,  1,  0],
-  );
+  const mOpacity = useTransform(progress, [t0, t1, t4, t5], [0, 1, 1, 0]);
 
   // Blur: swaps between t2 and t3 (mid-window, after logos have fully appeared)
   const blurVals = logo.startsSharp
-    ? [0, 0, 12, 12]   // starts sharp → becomes blurred as it approaches center
-    : [12, 12, 0, 0];  // starts blurred → snaps into focus mid-flight
+    ? [0, 0, 12, 12] // starts sharp → becomes blurred as it approaches center
+    : [12, 12, 0, 0]; // starts blurred → snaps into focus mid-flight
   const mBlur = useTransform(progress, [t0, t2, t3, t5], blurVals);
   const filter = useTransform(mBlur, (v) => `blur(${v}px)`);
 
@@ -88,7 +216,10 @@ function FloatingLogo({ logo, progress, windowStart, windowEnd }: LogoProps) {
         marginTop: -(logo.width / 2),
       }}
     >
-      <div className="relative scale-50 sm:scale-75 md:scale-100" style={{ width: logo.width, height: logo.width }}>
+      <div
+        className="relative scale-50 sm:scale-75 md:scale-100"
+        style={{ width: logo.width, height: logo.width }}
+      >
         <Image
           src={logo.src}
           alt={logo.alt}
@@ -147,10 +278,9 @@ export function TechStack() {
     <section
       id="section-techstack"
       ref={containerRef}
-      className="relative w-full h-[600vh] bg-[#F8F8F4] text-black"
+      className="relative w-full h-[300vh] md:h-[450vh] lg:h-[600vh] bg-[#F8F8F4] text-black"
     >
       <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center">
-
         {/* ── Center text — visible throughout ── */}
         <div className="relative z-30 text-center max-w-4xl px-4">
           {/* Halo eats logos as they pass behind the text */}
@@ -167,7 +297,8 @@ export function TechStack() {
             className="relative font-sans text-neutral-700 font-medium tracking-wide z-10 max-w-2xl mx-auto"
             style={{ fontSize: "clamp(1rem, 2vw, 1.5rem)" }}
           >
-            Tools I trust to get things done, from the first line of code to production
+            Tools I trust to get things done, from the first line of code to
+            production
           </p>
         </div>
 
@@ -177,8 +308,8 @@ export function TechStack() {
             key={`a-${i}`}
             logo={logo}
             progress={scrollYProgress}
-            windowStart={0.10 + (i * 0.02)}
-            windowEnd={0.48 + (i * 0.02)}
+            windowStart={0.1 + i * 0.02}
+            windowEnd={0.48 + i * 0.02}
           />
         ))}
 
@@ -188,12 +319,11 @@ export function TechStack() {
             key={`b-${i}`}
             logo={logo}
             progress={scrollYProgress}
-            windowStart={0.56 + (i * 0.02)}
+            windowStart={0.56 + i * 0.02}
             // Changed from 0.96 to 0.82 to prevent the final logos from exceeding max 1.0 progress
-            windowEnd={0.82 + (i * 0.02)}
+            windowEnd={0.82 + i * 0.02}
           />
         ))}
-
       </div>
     </section>
   );
