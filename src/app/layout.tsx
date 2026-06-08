@@ -14,9 +14,13 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Premium Portfolio | Creative Developer",
+  title: "labibnaufl's",
   description:
     "A highly interactive, aesthetically pleasing portfolio showcasing creative development work, dynamic animations, and premium web design.",
+  icons: {
+    icon: "/Images/logo-porto.png",
+    apple: "/Images/logo-porto.png",
+  },
 };
 
 export default function RootLayout({
