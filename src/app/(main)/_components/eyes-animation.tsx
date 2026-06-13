@@ -25,7 +25,7 @@ export function EyesAnimation() {
   }, []);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const blink = () => {
       controls.start({
         scaleY: [1, 0.1, 1],
         transition: {
@@ -33,9 +33,17 @@ export function EyesAnimation() {
           ease: "easeInOut",
         },
       });
-    }, 5000);
 
-    return () => clearInterval(interval);
+      // Random interval between 1-5 seconds
+      const randomDelay = 1000 + Math.random() * 4000;
+      setTimeout(blink, randomDelay);
+    };
+
+    // Start first blink after random delay
+    const initialDelay = 1000 + Math.random() * 4000;
+    const timeoutId = setTimeout(blink, initialDelay);
+
+    return () => clearTimeout(timeoutId);
   }, [controls]);
 
   return (
