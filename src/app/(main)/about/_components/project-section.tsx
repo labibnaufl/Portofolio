@@ -22,13 +22,6 @@ const projects: Projects[] = [
     link: "https://patraganesha.org/",
   },
   {
-    name: "23FLEX",
-    role: "Fullstack Developer",
-    type: "Academic Project",
-    thumbnail: "/Images/projects/23flex.png",
-    link: "https://23-flex.vercel.app/",
-  },
-  {
     name: "PLTU Machine Monitoring",
     role: "Fullstack & ML Developer",
     type: "Part Time Project",
