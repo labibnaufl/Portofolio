@@ -43,6 +43,7 @@ export function Quotes() {
                   src="/Images/Arrow 1.png"
                   alt="Arrow pointing to Socrates"
                   fill
+                  sizes="(max-width: 768px) 8rem, 14rem"
                   className="object-contain object-bottom"
                 />
               </div>
@@ -67,6 +68,7 @@ export function Quotes() {
                 src="/Images/socrates.png"
                 alt="Socrates"
                 fill
+                sizes="(max-width: 768px) 11rem, 22rem"
                 className="object-contain object-bottom pointer-events-none"
               />
             </motion.div>

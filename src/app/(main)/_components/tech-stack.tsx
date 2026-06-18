@@ -302,6 +302,42 @@ export function TechStack() {
           </p>
         </div>
 
+        {/* ── Scroll Cue: Mouse icon + label ── */}
+        <motion.div
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center gap-3"
+          style={{ opacity: useTransform(scrollYProgress, [0, 0.08], [1, 0]) }}
+        >
+          {/* Mouse outline with animated scroll dot */}
+          <div className="w-7 h-11 border-2 border-neutral-400 rounded-full flex justify-center pt-2">
+            <motion.div
+              className="w-1.5 h-1.5 bg-neutral-500 rounded-full"
+              animate={{ y: [0, 12, 0], opacity: [1, 0.2, 1] }}
+              transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+            />
+          </div>
+          <motion.span
+            className="text-[11px] font-medium text-neutral-400 tracking-[0.25em] uppercase select-none"
+            animate={{ opacity: [0.4, 1, 0.4] }}
+            transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+          >
+            Scroll to explore
+          </motion.span>
+        </motion.div>
+
+        {/* ── Scroll Cue: Vertical progress track ── */}
+        <div className="absolute right-5 md:right-8 top-1/2 -translate-y-1/2 z-40 flex flex-col items-center gap-2">
+          <div className="w-[2px] h-28 md:h-36 bg-neutral-300/30 rounded-full overflow-hidden">
+            <motion.div
+              className="w-full rounded-full origin-top"
+              style={{
+                scaleY: scrollYProgress,
+                height: "100%",
+                background: "linear-gradient(to bottom, #a3a3a3, #525252)",
+              }}
+            />
+          </div>
+        </div>
+
         {/* ── Group A: 10% → 48% of total scroll progress ── */}
         {groupA.map((logo, i) => (
           <FloatingLogo

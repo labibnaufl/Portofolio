@@ -45,6 +45,7 @@ export function Introduction() {
                 src="/Images/AdaIndonesiaCoy.png"
                 alt="Indonesia"
                 fill
+                sizes="(max-width: 768px) 4rem, 8vw"
                 className="object-contain object-center"
               />
             </span>

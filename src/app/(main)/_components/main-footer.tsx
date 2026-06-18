@@ -97,10 +97,7 @@ export function MainFooter() {
   );
 
   const navLinks = isAbout
-    ? [
-        { label: "Home", href: "/" },
-        { label: "Get My CV", href: "/Naufal Labib Nugroho.pdf" },
-      ]
+    ? [{ label: "Home", href: "/" }]
     : [{ label: "About Me", href: "/about" }];
 
   return (
@@ -133,8 +130,12 @@ export function MainFooter() {
             bottom: vertInset,
           }}
         >
-          {/* TOP LEFT — heading */}
-          <div className="flex items-start md:items-center">
+          {/* TOP LEFT — heading + CTA */}
+          <div
+            className={`flex flex-col items-start pt-16 md:pt-0 ${
+              isAbout ? "gap-5 md:gap-6" : "md:justify-center"
+            }`}
+          >
             <motion.h2
               style={{
                 color: headingColor,
@@ -143,11 +144,37 @@ export function MainFooter() {
               }}
               className="font-sans font-bold tracking-tight"
             >
-              What&apos;s next —<br />
-              shall we build it
-              <br />
-              together?
+              {isAbout ? (
+                <>
+                  Still Wanna
+                  <br />
+                  Know More?
+                </>
+              ) : (
+                <>
+                  What&apos;s next —
+                  <br />
+                  shall we build it
+                  <br />
+                  together?
+                </>
+              )}
             </motion.h2>
+            {isAbout && (
+              <motion.a
+                href="/Naufal Labib Nugroho.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block font-sans font-semibold text-sm md:text-base tracking-wide rounded-full px-6 py-3 border-2 transition-opacity hover:opacity-70"
+                style={{
+                  backgroundColor: headingColor,
+                  color: background,
+                  borderColor: headingColor,
+                }}
+              >
+                Get My Resume
+              </motion.a>
+            )}
           </div>
 
           {/* TOP RIGHT — navigation */}
