@@ -167,7 +167,7 @@ export function MainHeader() {
           className="text-xl md:text-2xl font-normal tracking-wide hover:opacity-60 transition-opacity duration-300"
           style={{ color: theme.color }}
         >
-          bibbb
+          bibbb.
         </Link>
 
         <button
