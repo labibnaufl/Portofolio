@@ -267,18 +267,46 @@ export function MainHeader() {
                   </div>
                 </div>
 
-                {/* Right: Arrow button */}
-                <Link
-                  href="/about"
-                  onClick={() => setSidebarOpen(false)}
-                  aria-label="Go to About"
-                  className="group flex shrink-0 items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-black hover:bg-black/80 transition-colors duration-300"
-                  style={{ borderRadius: "4px" }}
-                >
-                  <span className="text-white text-2xl font-light transition-transform duration-300 group-hover:translate-x-1 inline-block">
-                    →
-                  </span>
-                </Link>
+                {/* Right: Resume + Arrow grouped together */}
+                <div className="flex items-center gap-2">
+                  <a
+                    href="/Naufal Labib Nugroho.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex shrink-0 items-center justify-center gap-2 h-12 px-4 sm:h-14 sm:px-5 md:h-16 md:px-6 bg-black hover:bg-black/80 text-white font-sans font-semibold text-xs sm:text-sm uppercase tracking-[0.15em] transition-all duration-300"
+                    style={{ borderRadius: "4px" }}
+                  >
+                    <span>Get My Resume</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="transition-transform duration-300 group-hover:translate-y-0.5"
+                    >
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7 10 12 15 17 10" />
+                      <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                  </a>
+
+                  <Link
+                    href="/about"
+                    onClick={() => setSidebarOpen(false)}
+                    aria-label="Go to About"
+                    className="group flex shrink-0 items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-black hover:bg-black/80 transition-colors duration-300"
+                    style={{ borderRadius: "4px" }}
+                  >
+                    <span className="text-white text-2xl font-light transition-transform duration-300 group-hover:translate-x-1 inline-block">
+                      →
+                    </span>
+                  </Link>
+                </div>
               </div>
             </motion.div>
           </motion.aside>
