@@ -6,8 +6,6 @@ import { TechStack } from "./(main)/_components/tech-stack";
 import { PersuasiveCTA } from "./(main)/_components/persuasive-cta";
 import { MainFooter } from "./(main)/_components/main-footer";
 
-export const dynamic = "force-dynamic";
-
 export default function LandingPage() {
   return (
     <div className="flex flex-col w-full selection:bg-purple-500/30">

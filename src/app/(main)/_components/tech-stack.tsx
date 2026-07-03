@@ -6,7 +6,7 @@ import {
   useTransform,
   MotionValue,
   useMotionValue,
-} from "framer-motion";
+} from "motion/react";
 import { useRef, useEffect } from "react";
 import Image from "next/image";
 

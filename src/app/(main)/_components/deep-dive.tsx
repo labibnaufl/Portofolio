@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { EyesAnimation } from "./eyes-animation";
 
 export function DeepDive() {
@@ -37,7 +37,7 @@ export function DeepDive() {
       >
         <p className="max-w-3xl text-base md:text-2xl font-medium tracking-wide text-neutral-800 leading-relaxed text-left md:text-right">
           Hey there! I&apos;m <strong>Naufal Labib Nugroho</strong>, an undergraduate
-          Computer Engineering student from Diponegoro University I focus on building intelligent applications at the intersection of
+          Computer Engineering student from Diponegoro University. I focus on building intelligent applications at the intersection of
           machine learning and full-stack development, turning ideas into
           impactful digital experiences.
         </p>

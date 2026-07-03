@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform, useMotionTemplate } from "framer-motion";
+import { motion, useScroll, useTransform, useMotionTemplate } from "motion/react";
 import { useRef } from "react";
 
 export function HeroSection() {

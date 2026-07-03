@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "motion/react";
 
 export function EyesAnimation() {
   const pupilsRef = useRef<(HTMLDivElement | null)[]>([]);

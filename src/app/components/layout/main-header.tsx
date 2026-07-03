@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, AnimatePresence, Variants } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "motion/react";
 import { usePathname } from "next/navigation";
 
 // ── Section → header color map ─────────────────────────────────────────────
@@ -116,12 +116,10 @@ export function MainHeader() {
   const pathname = usePathname();
 
   // Reset theme & close sidebar on route change
-  const [prevPathname, setPrevPathname] = useState(pathname);
-  if (pathname !== prevPathname) {
-    setPrevPathname(pathname);
+  useEffect(() => {
     setSidebarOpen(false);
     setTheme(DEFAULT);
-  }
+  }, [pathname]);
 
   // IntersectionObserver for header theme
   useEffect(() => {

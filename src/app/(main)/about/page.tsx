@@ -1,11 +1,16 @@
+import type { Metadata } from "next";
 import { HeroSection } from "./_components/hero-section";
 import ProfileSection from "./_components/profile-section";
 import { ExperiencesSection } from "./_components/experiences-section";
 import { ProjectSection } from "./_components/project-section";
 import { ActivitiesSection } from "./_components/activities-section";
-import { MainFooter } from "../_components/main-footer"; // assuming MainFooter is in src/app/(main)/_components
+import { MainFooter } from "../_components/main-footer";
 
-export const dynamic = "force-dynamic";
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Learn more about Naufal Labib Nugroho — experiences, projects, activities, and the journey behind the code.",
+};
 
 export default function AboutPage() {
   return (

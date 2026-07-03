@@ -14,12 +14,28 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "labibnaufl's",
+  title: {
+    default: "Naufal Labib Nugroho — Software Engineer",
+    template: "%s | Naufal Labib Nugroho",
+  },
   description:
-    "A highly interactive, aesthetically pleasing portfolio showcasing creative development work, dynamic animations, and premium web design.",
+    "Portfolio of Naufal Labib Nugroho — a software engineer specializing in machine learning and full-stack development. Explore creative projects, dynamic animations, and premium web experiences.",
   icons: {
     icon: "/Images/logo-porto.png",
     apple: "/Images/logo-porto.png",
+  },
+  openGraph: {
+    title: "Naufal Labib Nugroho — Software Engineer",
+    description:
+      "Portfolio showcasing creative development work at the intersection of machine learning and full-stack development.",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Naufal Labib Nugroho — Software Engineer",
+    description:
+      "Portfolio showcasing creative development work at the intersection of machine learning and full-stack development.",
   },
 };
 

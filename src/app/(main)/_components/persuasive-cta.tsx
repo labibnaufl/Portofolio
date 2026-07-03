@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export function PersuasiveCTA() {
   return (
@@ -32,7 +32,7 @@ export function PersuasiveCTA() {
         viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
       >
-        <p className="text-lg md:text-2xl font-medium tracking-wide text-neutral-800 leading-relaxed font-sans  ml-8 md:ml-16">
+        <p className="text-lg md:text-2xl font-medium tracking-wide text-neutral-800 leading-relaxed font-sans ml-8 md:ml-16">
           I&apos;m not just an <strong>Engineer</strong> — Creative thinker, problem solver, and your partner in building digital experiences. From idea to execution, I focus on creating solutions that truly make an impact. Let&apos;s build something great together.
         </p>
       </motion.div>

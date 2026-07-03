@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { ScrollReveal } from "@/components/animations/_cursorAnimation/scroll-reveal";
 
 type Projects = {
